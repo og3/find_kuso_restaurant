@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 # 指定する地域のURL（例：東京 -> tokyo）
-BASE_URL = "https://tabelog.com/tokyo/A1303/A130301/rstLst/{page}?SrtT=rvcn&LstReserve=0&LstSmoking=0&svd=20250217&svt=1900&svps=2&vac_net=0&Srt=D"
+BASE_URL = "https://tabelog.com/rstLst/{page}?pcd=13&LstPrf=A1323&LstAre=A132305&station_id=&Cat=&RdoCosTp=2&LstCos=0&LstCosT=0&vac_net=0&search_date=2025%2F2%2F17%28%E6%9C%88%29&svt=1900&svps=2&svd=20250217&LstRev=0&LstSitu=0&LstReserve=0&LstSmoking=0&PG=1&from_search=&voluntary_search=1&SrtT=rvcn&Srt=D&sort_mode=&LstRange=&keyword=&from_search_form=1&lid=&ChkNewOpen=&hfc=1"
 
 # 取得するページ数（仕様上60件が最大）
 MAX_PAGES = 60
