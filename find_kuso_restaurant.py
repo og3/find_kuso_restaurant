@@ -6,8 +6,10 @@ import time
 # 指定する地域のURL（例：東京 -> tokyo）
 BASE_URL = "https://tabelog.com/tokyo/A1303/A130301/rstLst/{page}?SrtT=rvcn&LstReserve=0&LstSmoking=0&svd=20250217&svt=1900&svps=2&vac_net=0&Srt=D"
 
-# 取得するページ数
+# 取得するページ数（仕様上60件が最大）
 MAX_PAGES = 60
+# 食べログのスコアの閾値
+MIN_SCORE = 3.10
 
 # データ格納用リスト
 restaurants = []
@@ -59,7 +61,7 @@ for page in range(1, MAX_PAGES + 1):
             print(f"{name} | {score}")
             
             # 星3.00以下のみをリストに追加
-            if score <= 3.00:
+            if score <= MIN_SCORE:
                 restaurants.append([name, score, link])
                 print(f"⭐ {name} | {score} | {link}")
         
